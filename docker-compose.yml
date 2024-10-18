@@ -1,0 +1,30 @@
+services:
+  frontend:
+    container_name: frontend
+    build:
+      context: .
+      dockerfile: ./docker/node/Dockerfile
+    volumes:
+      - ./:/app
+    tty: true
+    ports:
+      - "5173:5173"
+
+      - "4173:4173"
+    working_dir: /app/frontend 
+    command: yarn dev
+
+  backend:
+    container_name: backend
+    build:
+      context: .
+      dockerfile: ./docker/node/express/Dockerfile
+    volumes:
+      - ./:/app
+    tty: true
+    ports:
+      - "3000:3000"
+    environment:
+      CHOKIDAR_USEPOLLING: 1
+    working_dir: /app/backend
+    command : yarn devStart
