@@ -1,6 +1,8 @@
 {
   "dependencies": {
     "express": "^4.21.1",
+    "firebase": "^11.0.0",
+    "firebase-tools": "^13.22.1",
     "nodemon": "^3.1.7"
   },
   "scripts": {
