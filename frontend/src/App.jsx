@@ -1,11 +1,8 @@
 import './App.css'
-import home from './pages/home'
 function App() {
-  
-
   return (
     <>
-      <home/>
+      <p>aaa</p>
     </>
   )
 }
