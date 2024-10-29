@@ -1,3 +1,5 @@
+import db from "./service/firebase";
+
 const express = require("express")
 const app = express();
 
